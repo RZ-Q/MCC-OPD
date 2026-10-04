@@ -1,0 +1,774 @@
+{
+  "version": "locomo-posthoc-question-guidance-20260922-v3.2",
+  "base_rubric": "remem-mem0@d87840b",
+  "questions": {
+    "locomo_0_qa31": {
+      "question": "When did Melanie go camping in June?",
+      "original_reference": "The week before 27 June 2023",
+      "guidance": "The camping event occurred in the week before the conversation on 27 June 2023. Accept that relative period or an equivalent date range. June 27 itself is the conversation date, not the camping date. Do not invent a single exact day when only a week is given.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa54": {
+      "question": "When did Caroline draw a self-portrait?",
+      "original_reference": "The week before 23 August 2023",
+      "guidance": "The self-portrait was made last week relative to 23 August 2023. Accept the week before that date or an equivalent period in August. July dates do not describe this event.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_1_qa3": {
+      "question": "What do Jon and Gina both have in common?",
+      "original_reference": "They lost their jobs and decided to start their own businesses.",
+      "guidance": "The question broadly asks what Jon and Gina have in common. The reference (both lost their jobs and began businesses) is one valid answer, not an exhaustive list. Both explicitly love dance and pursue their own businesses, so their shared passion for dance and commitment to business is also a supported correct answer.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_1_qa67": {
+      "question": "How does Jon use the clipboard with a notepad attached to it?",
+      "original_reference": "To set goals, track achievements, and find areas for improvement",
+      "guidance": "Accept concise descriptions of using the notebook to stay organized and motivated, including setting goals, tracking achievements, and finding areas to improve. Stays organized and motivated and he uses it to stay organized and motivated express the same core answer. Pronouns, capitalization and punctuation do not change correctness.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_1_qa75": {
+      "question": "What does Gina say to Jon about the grand opening?",
+      "original_reference": "Let's live it up and make some great memories",
+      "guidance": "Gina gives several supportive remarks about the upcoming grand opening. Accept her congratulations, excitement for tomorrow, praise for the studio/work, commitment to be by his side, or anticipation of making memories. The gold is one quotation, not the only valid remark. Do not accept a claim that the opening has already happened and was great: these remarks anticipate tomorrow.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa43": {
+      "question": "When was John's old area hit with a flood?",
+      "original_reference": "The week before 7 July 2023",
+      "guidance": "The flood occurred last week relative to the conversation on 7 July 2023. Accept the week before 7 July or an equivalent prior-week expression. July 7 alone incorrectly substitutes the conversation date for the event date.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa7": {
+      "question": "What items des John mention having as a child?",
+      "original_reference": "A doll, a film camera",
+      "guidance": "For this plural childhood-items question, a complete answer must mention both the little doll and the film camera. Either item alone is incomplete. Accept synonyms such as childhood doll and camera, without requiring exact wording.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa7": {
+      "question": "When did Joanna finish her first screenplay?",
+      "original_reference": "The Friday before 23January, 2022",
+      "guidance": "The screenplay was finished/printed last Friday relative to Sunday 23 January 2022, i.e. Friday 21 January 2022. Accept January 21 or the Friday before January 23. January 23 alone is the conversation date and is not correct.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa115": {
+      "question": "What kind of films does Joanna enjoy?",
+      "original_reference": "Dramas and emotionally-driven films",
+      "guidance": "Joanna explicitly says she likes dramas and romcoms in D1:14, and dramas and emotionally driven films in D9:9. Accept either supported description, including romantic comedies as an expansion of romcoms. The narrower gold does not invalidate the other explicit preference.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa93": {
+      "question": "What did John receive for achieving second place in the tournament?",
+      "original_reference": "money and a trophy",
+      "guidance": "The complete prize for second place comprised both money and a trophy. An answer naming only money or only a trophy omits a required part. Accept cash/prize money and an award trophy as synonyms; casing and punctuation are irrelevant.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa9": {
+      "question": "When did a mishap occur with Calvin's musical gear and favorite mic?",
+      "original_reference": "On a week before 16 May, 2023",
+      "guidance": "The flooding/musical-gear incident occurred last week relative to 16 May 2023, not on May 16 itself. Accept the prior-week period or an equivalent relative expression. An exact date is not required because the evidence gives only a week.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa10": {
+      "question": "When did Calvin's place get flooded in Tokyo?",
+      "original_reference": "On a week before 16 May, 2023",
+      "guidance": "The flooding occurred last week relative to 16 May 2023, not on May 16 itself. Accept the prior-week period or an equivalent relative expression. An exact date is not required because the evidence gives only a week.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa12": {
+      "question": "When was Calvin's concert in Tokyo?",
+      "original_reference": "last week of May 2023",
+      "guidance": "The Tokyo performance was upcoming on May 16 and described as last week in the May 31 conversation. Accept late May 2023 / the last week of May / the week before May 31, at the granularity supported by the reference. May 16 was before the performance and is wrong.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa2": {
+      "question": "When did Dave see Aerosmith perform live?",
+      "original_reference": "on the weekend before March 26, 2023",
+      "guidance": "Dave saw Aerosmith at the festival last weekend relative to the 26 March 2023 conversation. Accept the weekend before March 26 or an equivalent preceding-weekend expression. March 26 alone is the conversation date, not the event date.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa65": {
+      "question": "What are some changes Caroline has faced during her transition journey?",
+      "original_reference": "Changes to her body, losing unsupportive friends",
+      "guidance": "The question asks for some changes, not every change. Accept a supported account of physical transition, changes in friendships/supportive community, or associated emotional and social challenges. Finding a supportive community and dealing with emotional/social challenges describes the supported relationship changes; do not require an exhaustive list. Capitalization and punctuation cannot change this decision.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa116": {
+      "question": "Why did Maria need to help her cousin find a new place to live?",
+      "original_reference": "Her cousin had to leave and find a new place in a hurry.",
+      "guidance": "The requested reason is the cousin having to leave and find a new home urgently. Merely saying supporting her cousin during a tough time restates help without the housing-related reason and is insufficient. Accept needing a new place in a hurry or equivalent wording.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa50": {
+      "question": "What attributes describe John?",
+      "original_reference": "Selfless, family-oriented, passionate, rational",
+      "guidance": "This is an open description of attributes, not an explicit exhaustive-list question. Accept supported characterizations such as passionate, dedicated, selfless, family-oriented, rational, or committed to helping his community. A phrase describing passion and commitment to making a positive community impact is supported; exact gold adjectives are not mandatory.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa42": {
+      "question": "What movies have both Joanna and Nate seen?",
+      "original_reference": "\"Little Women\", \"Lord of the Rings\"",
+      "guidance": "The requested intersection consists of Little Women and The Lord of the Rings. A complete answer should identify both. Joanna recommending an unnamed romantic drama about memory and relationships does not establish that Nate has seen it; that description cannot replace The Lord of the Rings.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa76": {
+      "question": "How has Nate tried to disburse his vegan ice-cream recipes?",
+      "original_reference": "teaching others, cooking show",
+      "guidance": "Distinguish distributing recipes from sharing already-made ice cream. Nate taught people how to make it, sent Joanna a recipe, and taught recipes on his cooking show. Accept these supported recipe-sharing methods. Merely saying he shared with a vegan diet group and made it available to try describes sharing ice cream in D16:8, not a supported method of distributing the recipes.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa1": {
+      "question": "What are John's goals for his career that are not related to his basketball skills?",
+      "original_reference": "get endorsements, build his brand, do charity work",
+      "guidance": "This plural goals question asks for the off-court goals across the conversation: charitable/community impact (including inspiring others), endorsements, and building his brand. Require both the social-impact aim and the endorsement/brand-building aim for a complete answer. Only making a positive difference and inspiring others omits the commercial career goal.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa28": {
+      "question": "Which popular music composer's tunes does Tim enjoy playing on the piano?",
+      "original_reference": "John Williams",
+      "guidance": "The requested answer is the composer John Williams, inferred from the Harry Potter and the Philosopher's Stone theme. A film title alone does not identify the composer and is insufficient. Accept John Williams or an unambiguous spelling variant.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa163": {
+      "question": "Which language is Tim learning?",
+      "original_reference": "German",
+      "guidance": "Tim is learning German. Spanish is attributed to John, not Tim. Accept German; reject German and Spanish because the extra language gives Tim another person's attribute.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa1": {
+      "question": "When did Andrew start his new job as a financial analyst?",
+      "original_reference": "The week before March 27, 2023",
+      "guidance": "Andrew started the financial analyst job in the week before the March 27, 2023 conversation. March 27 alone is the conversation date, not the start date. Accept the supported preceding-week period; do not require an invented exact day.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa25": {
+      "question": "When did Andrew and his girlfriend go fishing?",
+      "original_reference": "weekend before August 24, 2023",
+      "guidance": "The fishing trip occurred on the weekend before the August 24, 2023 conversation. August 24 itself is not that weekend. Accept the prior weekend or an equivalent date range.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa89": {
+      "question": "What is essential to keep the dogs looking good according to Audrey?",
+      "original_reference": "Daily brushing, regular baths, nail trims, and lots of love",
+      "guidance": "Audrey explicitly states that regular grooming is essential to keep the dogs looking good, followed by examples (brushing, baths and nail trims) and love. Accept regular grooming as the supported umbrella answer; listing every example is unnecessary.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa108": {
+      "question": "How does Audrey describe her dogs' response to snow?",
+      "original_reference": "They definitely prefer nice, sunny days in the grass.",
+      "guidance": "Audrey says her dogs hate snow, were confused in a snowy park, and prefer nice sunny days in the grass. Accept those compatible descriptions. Reject a claim that they love snow even if it also says they prefer sunny days, because it contradicts the evidence.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa78": {
+      "question": "What did James adopt in April 2022?",
+      "original_reference": "a pup",
+      "guidance": "James adopted a pup/puppy/dog which he named Ned. Ned is the specific name of the same adopted animal and is an acceptable answer, even without the generic noun pup.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa107": {
+      "question": "What made John leave his IT job?",
+      "original_reference": "to focus on things that align with his values and passions",
+      "guidance": "John left IT to do something that made a difference and aligned with his values and passions; he explicitly wanted a gaming-industry career organizing tournaments. Accept pursuing a meaningful career in gaming as a supported specific expression of the reason. Do not reject it merely because the gold gives a more abstract description.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa138": {
+      "question": "What inspired James to create his game?",
+      "original_reference": "Witcher 3",
+      "guidance": "The broadly worded question allows both his explicitly stated passion for gaming and storytelling and the specific inspiration from The Witcher 3. Both are supported sources of his motivation to create his own game; neither exact wording nor only the game title is mandatory.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa132": {
+      "question": "What career milestone did John achieve recently in September 2022?",
+      "original_reference": "making his first mobile game",
+      "guidance": "The completed September milestone was making/developing his first mobile game. It was scheduled to launch the following month. Reject already launched/released as the completed milestone; do not turn the future launch into a past event.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa8": {
+      "question": "What helped Deborah find peace when grieving deaths of her loved ones?",
+      "original_reference": "yoga, old photos, the roses and dahlias in a flower garden, nature",
+      "guidance": "Accept supported sources of comfort such as yoga, remembering loved ones through old photos, the flower garden, or nature. The question does not explicitly demand an exhaustive list. Memories and connection to her loved ones is a valid paraphrase of the comfort from revisiting family memories; punctuation and capitalization must not affect correctness.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa34": {
+      "question": "What accidents has Evan's son faced lately?",
+      "original_reference": "injured at a soccer game, fell off his bike",
+      "guidance": "For the plural accidents question, a complete answer must include both the soccer injury (ankle) and the fall/bike accident. A bike accident alone omits the other event, irrespective of capitalization and punctuation.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa79": {
+      "question": "What does Dave do when he feels his creativity is frozen?",
+      "original_reference": "immerse himself in something he loves",
+      "guidance": "Dave says he himself immerses in something he loves, such as concerts or favorite albums. Taking a break from music and exploring other things is advice he gives the other speaker, not the described personal habit. Do not substitute the advice for Dave's own response to creative block.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa32": {
+      "question": "When was Deborah in Bali?",
+      "original_reference": "in 2022",
+      "guidance": "The statement Bali last year occurs in the February 22, 2023 conversation, so last year means 2022. Accept 2022 and the evidence-grounded relative expression Bali last year.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa2": {
+      "question": "When did Deborah`s mother pass away?",
+      "original_reference": "a few years before 2023",
+      "guidance": "The evidence says her mother passed away a few years before the January 2023 conversation. No exact year is given. Accept that relative multi-year period. 2010 and 2022 are unsupported specific years and are not equivalent to a few years before 2023.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa76": {
+      "question": "When did Jolene and her partner try scuba diving lessons?",
+      "original_reference": "Friday before 17 September, 2023",
+      "guidance": "The scuba-diving lesson was on the Friday before Sunday September 17, 2023, namely September 15. Accept that Friday/September 15; September 17 is the conversation date, not the lesson date.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa29": {
+      "question": "When did Jolene have a mini-retreat to reflect on her career?",
+      "original_reference": "Wednesday before 9 February, 2023",
+      "guidance": "The mini-retreat was on Wednesday before Thursday February 9, 2023, namely February 8. Accept the preceding Wednesday/February 8, not the conversation date February 9.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa121": {
+      "question": "What did Jolene ask Deb to help with on 13 March, 2023?",
+      "original_reference": "time management",
+      "guidance": "Jolene asked Deborah (Deb) for help with time management. A concise answer time management is correct. Reject an answer explicitly reversing the roles and saying Deborah asked Jolene.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa151": {
+      "question": "What did Deborah and her husband use to play to bond and make memories?",
+      "original_reference": "video games",
+      "guidance": "Deborah and her husband used to play games together, specifically detective games. Accept video games, detective games, or the supported specific subtype; exact use of the generic gold phrase is unnecessary.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa181": {
+      "question": "Where did Deborah get married?",
+      "original_reference": "on the beach",
+      "guidance": "The wedding location was the beach. A literal template placeholder such as [short answer] supplies no location and must be WRONG. Accept on the beach or equivalent factual wording.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa22": {
+      "question": "When Evan did meet his future wife?",
+      "original_reference": "week before August 7, 2023.",
+      "guidance": "Evan met her on the Canada trip in the week before the August 7, 2023 conversation. August 7 alone incorrectly substitutes the conversation date for the event date. Accept the preceding-week period.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa40": {
+      "question": "When did Evan start taking painting classes?",
+      "original_reference": "Few days before 19 August, 2023.",
+      "guidance": "Evan said on August 19, 2023 that he had started taking painting classes a few days ago. The required event is starting classes, not first taking up painting years earlier. Accept a few days before August 19 and a reasonable date-level approximation expressing the same recent preceding period; the generation instruction explicitly permits an approximate date. A date-only estimate need not literally say approximately and should not be rejected solely because the source does not fix one unique calendar day. August 19 itself, a later date, or years earlier is not equivalent. The evidence gives no time of day: an asserted event hour or minute, including a timestamp copied from another conversation, is unsupported. A permitted date-level estimate is not proof of one uniquely established start day. Do not invent a new fixed numerical acceptance interval for few days.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260922-v3"
+    },
+    "locomo_8_qa76": {
+      "question": "When did Evan finish the painting that's hanging in the exhibit?",
+      "original_reference": "few days before 17 December, 2023.",
+      "guidance": "Evan finished the painting a few days before December 17, 2023. December 17 is the conversation date, not the completion date. Accept the supported relative period rather than demanding an exact day.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa114": {
+      "question": "What did Evan recommend Sam acquire to get started with painting?",
+      "original_reference": "Acrylic paints, brushes, canvas/paper, palette",
+      "guidance": "Evan recommended getting a starter set of painting supplies: acrylic paints, brushes, canvas/paper and a palette. For this question, paint set and a paint set are equivalent acceptable umbrella descriptions of the recommended painting supplies. The article a must not change correctness; a wholly unrelated item is not acceptable.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa145": {
+      "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+      "original_reference": "the recipes for cookies",
+      "guidance": "Evan offered to send recipes after discussing healthy snacks and cookies. Accept the cookie recipes, recipes for healthy snacks, or recipes as an unambiguous answer to what he offered to share. Exact repetition of the word cookies is not mandatory.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa97": {
+      "question": "What workshop did Caroline attend recently?",
+      "original_reference": "LGBTQ+ counseling workshop",
+      "guidance": "The question asks about the counseling workshop Caroline attended. Distinguish it from a support-group meeting and a later youth mentorship program. Accept LGBTQ/trans counseling workshop or equivalent; merely naming the support group or mentorship program gives a different event despite the shared LGBTQ topic.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa61": {
+      "question": "What musical artists/bands has Melanie seen?",
+      "original_reference": "Summer Sounds, Matt Patterson",
+      "guidance": "A complete answer to the plural artists/bands question identifies both Summer Sounds and Matt Patterson. A generic extra band description does not replace Matt Patterson. Summer Sounds alone and Summer Sounds with unnamed bands are equally incomplete.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa124": {
+      "question": "What pets does Melanie have?",
+      "original_reference": "Two cats and a dog",
+      "guidance": "Account for the later adoption of another cat: Melanie has two cats and a dog. Accept two cats plus a dog/pup. A pup and a kitty describes the earlier incomplete inventory and should not become correct because of an article, capitalization or punctuation.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_1_qa4": {
+      "question": "Why did Jon decide to start his dance studio?",
+      "original_reference": "He lost his job and decided to start his own business to share his passion.",
+      "guidance": "Jon lost his job and chose the dance studio because he was passionate about dancing and wanted to teach/share that joy with others. Accept the explicit motivational reason of sharing his passion or joy of dance even when job loss is not repeated. Adding the compatible fact that he loves dance does not make that answer wrong.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa46": {
+      "question": "What board games has Nate played?",
+      "original_reference": "Chess, Catan.",
+      "guidance": "The board games are Chess and Catan. Inception is explicitly a movie in the conversation, not a board game. A complete answer should identify Chess and Catan; adding Inception as a board game is a factual type error, not a valid alternate name.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa22": {
+      "question": "Where was Andrew planning to go during the first weekend of August 2023?",
+      "original_reference": "camping with girlfriend",
+      "guidance": "The planned activity for the first weekend of August was camping with his girlfriend and dog Toby. Hiking is a different activity and does not answer this event merely because both are outdoor recreation. Accept camping and compatible descriptions of the companions.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa15": {
+      "question": "What writing classes has Maria taken?",
+      "original_reference": "Poetry, creative writing",
+      "guidance": "The writing classes were poetry and creative writing. A complete answer should include both. A beginner yoga class is not a writing class and cannot replace creative writing. Poetry class and beginner yoga class has the same incorrect content irrespective of capitalization.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa67": {
+      "question": "What pets does Nate have?",
+      "original_reference": "A dog and threeturtles.",
+      "guidance": "Nate has a real dog named Max and three turtles. The stuffed animal dog was a gift to Joanna, not one of Nate's living pets. Do not accept three turtles and a stuffed animal dog as equivalent to his real pets.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa145": {
+      "question": "What kind of content did Joanna share that someone wrote her a letter about?",
+      "original_reference": "A blog post about a hard moment in her life",
+      "guidance": "Joanna shared an online blog post about a hard moment in her life. A reader then wrote her a letter in response. The question asks for Joanna's published content, not the reader's letter; a handwritten letter cannot substitute for the blog post.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa11": {
+      "question": "What is Joanna allergic to?",
+      "original_reference": "Most reptiles,animals with fur,cockroaches, dairy",
+      "guidance": "The conversation explicitly describes allergies to most reptiles, animals with fur, and cockroaches. It separately uses the wording lactose intolerant and dairy-free for dairy avoidance. The gold conflates these descriptions: do not require dairy to be named as an allergy for an answer covering the stated allergies to be correct. Distinguish a claim about the stated allergies from the separately stated dietary intolerance; the original automatic F1 reference is retained as a historical metric.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa65": {
+      "question": "What does Audrey do during dog playdates in the park?",
+      "original_reference": "chat with people while dogs make new friends",
+      "guidance": "Audrey plays fetch with a ball or frisbee, meets/chats with other dog owners, and the dogs socialize during park playdates. Accept these supported descriptions, including meeting other dog owners for doggie playdates. Adding the supported fetch activity does not invalidate the core interaction answer.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa60": {
+      "question": "When did Deborah go to a yoga retreat near her mom's place?",
+      "original_reference": "a week before 24 August,2023",
+      "guidance": "The retreat near her mother's place was last week relative to August 24, 2023. Accept the week before August 24 or an equivalent period. August 12 at 8:50 pm is an unrelated conversation timestamp and does not identify this event.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa91": {
+      "question": "What did the system John created help the charitable foundation with?",
+      "original_reference": "tracking inventory, resources, and donations",
+      "guidance": "John explicitly says the software helped streamline the foundation's operations and make them run more smoothly, then describes inventory, resources, donations and reporting. Accept that directly supported umbrella description as well as specific tracking functions. The exact list of all functions is not mandatory for this general-purpose question.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa7": {
+      "question": "What hobbies did Sam start or consider starting or resuming?",
+      "original_reference": "Painting, kayaking, hiking, cooking, running",
+      "guidance": "The reference lists the hobbies Sam started, considered or resumed: painting, kayaking, hiking, cooking and running. For this plural aggregation question, an answer naming only painting is incomplete, regardless of capitalization. Extra activities belonging to Evan must not replace Sam's hobbies; do not treat an arbitrary yoga addition as a correct synonym.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa26": {
+      "question": "What motivates Evan to take care of his health?",
+      "original_reference": "family, fitness tracker, thirst for adventure on interesting hikes",
+      "guidance": "Supported motivations include family, feedback/reminders from his fitness tracker, and a desire for hiking adventures. The question broadly asks what motivates him, so a supported core motivation such as family support can be sufficient; an exhaustive list is not required. Paraphrases describing family support, personal experiences and enjoyable pursuits must be treated consistently when they convey that same core motivation.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa31": {
+      "question": "How might Evan and Sam's experiences with health and lifestyle changes influence their approach to stress and challenges?",
+      "original_reference": "Their experiences likely lead them to view challenges as opportunities for growth and change. They both have embraced healthier lifestyles, indicating a proactive approach to managing stress and challenges.",
+      "guidance": "This is an open inference question. Their experiences support a proactive, persistent approach: small consistent lifestyle changes, perseverance, seeking support and treating challenges constructively. Accept compatible paraphrases expressing small steps and persistence or support for managing stress/challenges; the exact phrase opportunities for growth is not mandatory.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa154": {
+      "question": "Why did Evan apologize to his partner?",
+      "original_reference": "for a drunken night",
+      "guidance": "The drunken night refers to the incident in which Evan drank too much and had a peeing accident near someone's roses; he later apologized to his partner for that night. Accept the specific roses/peeing incident as an explanation, even without repeating the words drunken night.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa5": {
+      "question": "What are Dave's dreams?",
+      "original_reference": "open a car maintenance shop, work on classic cars, build a custom car from scratch",
+      "guidance": "Dave's dreams concern opening his car shop, working on/restoring classic cars and building a custom car from scratch. Touring the world and performing music for different audiences are Calvin's dreams. An answer that attributes Calvin's music goals to Dave is incorrect even if it also includes some correct car-related goals.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa130": {
+      "question": "How does Calvin balance his job and personal life?",
+      "original_reference": "Takes it one day at a time",
+      "guidance": "Calvin says he takes it one day at a time and relies on a strong support system of friends and his team. He also explicitly describes taking breaks with favorite activities and relying on helpful people when facing setbacks. Accept these supported balancing/coping strategies; the single gold phrase is not the only supported answer.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa140": {
+      "question": "What do Dave and Calvin agree on regarding their pursuits?",
+      "original_reference": "It's fulfilling and motivating",
+      "guidance": "The question is not restricted to one dated exchange. Dave and Calvin agree their pursuits are fulfilling/motivating, that creating things and seeing progress is satisfying, and that hard work, dedication and passion pay off. Accept these explicitly shared views. Do not reject hard work/progress or creation/improvement merely because the gold quotes only the later fulfillment exchange.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa59": {
+      "question": "Which career-high performances did John achieve in 2023?",
+      "original_reference": "highest point score, highest assist",
+      "guidance": "John achieved career highs in both points scored (40 points) and assists. This plural question asks for the two performances. Assists alone is incomplete; adding a or the before big game must not change that judgment.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa0": {
+      "question": "what are John's goals with regards to his basketball career?",
+      "original_reference": "improve shooting percentage, win a championship",
+      "guidance": "The basketball-performance goals are improving his shooting percentage and winning a championship. A complete answer should give both. Charitable impact away from the court is a separate off-court goal and does not replace improving shooting. Paraphrases of winning a championship and making an off-court difference are equally incomplete.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa102": {
+      "question": "What did John say about NYC, enticing Tim to visit?",
+      "original_reference": "It's got so much to check out - the culture, food - you won't regret it.",
+      "guidance": "John described NYC as amazing and a must-visit, with new exciting things, restaurants, culture and food. Accept amazing and a must-visit as his directly supported invitation, as well as more detailed descriptions of those attractions. Exact quotation of all culture/food details is not required.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_1_qa73": {
+      "question": "How does Gina describe the feeling that dance brings?",
+      "original_reference": "magical",
+      "guidance": "The question does not request one exact quoted word. Gina describes dance as magical and bringing joy/thrill (D15:8), as self-expression and happiness (D9:10), and as stress relief that makes worries vanish (D11:6). Accept concise faithful descriptions of these feelings, including happiness, joy, self-expression, and relief/peace; the gold magical is not the only supported description. Do not require that exact adjective. Jon, not Gina, says where I am most alive (D11:7); do not treat that attribution or an unsupported comparison such as like air alone as established for Gina. Judge the answer by its supported core and do not turn a general positive phrase with no supported core into a correct quotation.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa97": {
+      "question": "What special memory does \"Harry Potter and the Philosopher's Stone\" bring to Tim?",
+      "original_reference": "Watching it with his family",
+      "guidance": "The film brings Tim memories of watching it with his family (D8:16 and D8:18). Accept concise equivalent references to this family viewing, including sharing snacks and blankets. John, not Tim, describes his wedding, his bride walking down the aisle and their first dance in a restaurant (D12:7-10). Those are a different person and event, not memories this film brings Tim. An answer attributing that wedding or restaurant dance to Tim as part of this film memory is wrong, including when it combines that material contradiction with the correct family-viewing fact. Mere optional detail is not required; the rule addresses misattributed events.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa83": {
+      "question": "What kind of professional activities does Jolene participate in to gain more experience in her field?",
+      "original_reference": "present work at virtual conference, attend workshops  and intern at firms",
+      "guidance": "The documented professional activities are internship/hands-on engineering work, workshops/networking, and presenting at a virtual conference. Equivalent summaries of these are valid; the reference is not an exact wording requirement. The volunteer STEM program in D5:7-9 was only an idea still being planned, not documented participation. Do not treat that proposed activity as already performed. A multi-activity answer should give the professional experience supported by D13:5-7 and D21:6 rather than substitute an unperformed volunteer plan. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa22": {
+      "question": "Who or which organizations have been the beneficiaries of John's charity tournaments?",
+      "original_reference": "animal shelter, homeless, children's hospital",
+      "guidance": "This asks for the beneficiaries across John's charity tournaments. Require all three supported beneficiary types: the animal/dog shelter, homeless people (food/groceries), and the children's hospital. Order and wording do not matter. A children's hospital alone is a true subset but is incomplete for this plural, across-events question. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa62": {
+      "question": "Where did Deborah get her cats?",
+      "original_reference": "Luna is from the shelter and Max is her mother's cat",
+      "guidance": "The plural cats have two distinct origins: Luna was taken from a shelter, and Max belonged to Deborah's mother and was taken in after her mother died. Require both origins, with names optional if the two origins are clear. From the shelter alone is incomplete and must not be treated differently by capitalization. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa87": {
+      "question": "How did John describe the team bond?",
+      "original_reference": "Awesome",
+      "guidance": "The question does not demand the exact adjective awesome. John says awesome, and in the same exchange describes strong mutual support, a family away from home, and teammates who encourage one another. Accept strong/supportive/family-like bond and equivalent positive descriptions of this connection. Do not reject these because they omit awesome. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa88": {
+      "question": "What activities does Deborah pursue besides practicing and teaching yoga?",
+      "original_reference": "biking, going to art shows, running, organizing workshops to practice mindfulness and self-care, surfing, gardening",
+      "guidance": "The question asks for Deborah's activities besides practicing/teaching yoga, across the conversation. The supported set in the reference is biking, art shows, running, organizing mindfulness/self-care workshops, surfing and gardening. Require coverage of these substantive activity categories, allowing synonyms and order changes. Repeating teaching yoga does not answer besides yoga; a short list of only yoga events, running, meditation and pets is an incomplete substitute for the documented broader set. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa55": {
+      "question": "What subject have Caroline and Melanie both painted?",
+      "original_reference": "Sunsets",
+      "guidance": "The common specific subject is sunsets, visible in both supplied captions. Accept sunset/setting sun or an equivalent description. Nature or landscapes alone is a broader category that does not identify the shared subject, so it is insufficient. Capitalization cannot change that decision. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_1_qa23": {
+      "question": "How did Gina promote her clothes store?",
+      "original_reference": "worked with an artist to make unique fashion pieces, made limited-edition sweatshirts, got some new offers and promotions for online store, developed a video presentation showing how to style her pieces",
+      "guidance": "Gina actually launched an ad campaign, worked with a local artist on designs, made offers/promotions, created a styling video and a limited-edition line. Faithful summaries of her actual promotional work are acceptable; the gold does not exhaust every actual campaign. In D8:12 working with fashion bloggers/influencers is explicitly a plan for the next few months, not completed work. Do not turn that plan into an accomplished collaboration; an answer presenting it as already done has a material time-status error even if other listed actions are supported. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa6": {
+      "question": "Where has Maria made friends?",
+      "original_reference": "homeless shelter, gym, church",
+      "guidance": "Maria's documented friendship settings are shelter volunteering, church, and the gym. Require those three settings, with synonyms accepted. The service-focused online group in D3:1 belongs to John, not Maria. An answer assigning that group to Maria is a person-attribution error, not an equivalent alternative to her church/gym friendships. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa56": {
+      "question": "Which of James's family members have visited him in the last year?",
+      "original_reference": "mother, sister",
+      "guidance": "The requested visiting family members are James's sister and mother; both should be identified. His dogs appear with his sister but do not replace either requested relative. Samantha is described as his girlfriend, not the mother or sister who visited; dogs, Samantha and sister is not an equivalent answer to mother and sister. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa18": {
+      "question": "Where has Melanie camped?",
+      "original_reference": "beach, mountains, forest",
+      "guidance": "Across the conversation Melanie has camped in the mountains, at the beach, and in the forest. Require the three location types, allowing synonyms and any order. The mountains and beach is a supported but incomplete subset; punctuation must not change that assessment. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa40": {
+      "question": "What is a good place for dogs to run around freely and meet new friends?",
+      "original_reference": "The dog park",
+      "guidance": "The question broadly asks for a suitable place, not for an exact quotation or one named outdoor site. Dog park is directly supported. Also accept the doggy daycare near Andrew: D9:7-9 explicitly recommends it as a place for the dogs, with a big indoor play space. These are alternative supported venues, not a claim that daycare and park are the same building. Do not reject the daycare solely because the gold lists dog park. Identical meaning with different capitalization or final punctuation must receive the same label.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa69": {
+      "question": "What personality traits might Melanie say Caroline has?",
+      "original_reference": "Thoughtful, authentic, driven",
+      "guidance": "This is a category-3 inference question about personality traits, not a demand to repeat a fixed three-word list. Melanie explicitly praises Caroline's strength/courage, drive to help and thoughtfulness; her authentic self-expression is also supported. Accept equivalent supported traits such as courageous/resilient, determined/passionate, empathetic/supportive and self-accepting. An answer need not contain the exact words thoughtful, authentic and driven; do not accept unrelated traits without conversational support.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa108": {
+      "question": "What does Melanie say running has been great for?",
+      "original_reference": "Her mental health",
+      "guidance": "Melanie says running helps her de-stress, clear her mind and improve her headspace. Accept these as equivalent to mental health. In an answer such as Desserting and clearing her mind, the clearly stated clearing her mind supplies the supported core; the apparent typo is not a reason to reject that core unless the answer makes a material contradictory claim.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa19": {
+      "question": "What do Melanie's kids like?",
+      "original_reference": "dinosaurs, nature",
+      "guidance": "The two documented interests asked about are dinosaurs/the dinosaur exhibit and nature/outdoor exploration. Require both interests for the across-conversation plural answer. Nature/outdoor activities alone and dinosaurs alone are incomplete subsets; equivalent nature paraphrases must be treated identically.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa41": {
+      "question": "When did Caroline join a new activist group?",
+      "original_reference": "The Tuesday before 20 July 2023",
+      "guidance": "The conversation date is Thursday 20 July 2023. Last Tuesday is 18 July 2023. Accept that date or the equivalent Tuesday before July20; reject July12 and July20 itself. July12 is neither that Tuesday nor the group-joining date.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_1_qa17": {
+      "question": "Why did Gina decide to start her own clothing store?",
+      "original_reference": "She always loved fashion trends and finding unique pieces and she lost her job so decided it was time to start her own business.",
+      "guidance": "Gina directly explains her motivation as her passion for fashion trends/unique pieces and blending dance with fashion. Losing her job also helped prompt the decision. Accept a supported explanation of her fashion/dance passion, creative self-expression and desire to start her own business; the why question does not require every causal detail, and job loss is not mandatory when that substantive motivation is given. Do not accept unsupported or contradictory motivations.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_1_qa9": {
+      "question": "Which city have both Gina and Jon visited?",
+      "original_reference": "Rome",
+      "guidance": "The question asks for the intersection of cities both have visited. Rome is supported for both. Gina explicitly says she has never visited Paris in D2:5, so Rome and Paris (in either order) is wrong: including Rome does not cancel a city that fails the both-visited condition.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa114": {
+      "question": "What kind of books does Nate enjoy?",
+      "original_reference": "Adventures and magic",
+      "guidance": "Nate describes books/series with adventures, magic, world building and characters. Fantasy books or a fantasy book series is a valid genre summary of that description; do not require the exact reference words adventures and magic. The response must identify a book/series interest; an answer only about movies does not answer what books he enjoys. An additional supported movie interest does not negate a clearly identified fantasy book answer.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa44": {
+      "question": "What activities has Maria done with her church friends?",
+      "original_reference": "Hiking, picnic, volunteer work",
+      "guidance": "Maria explicitly did camping, picnicking, hiking and community/volunteer work with church friends. Camping is valid even though omitted from the gold list. A faithful multi-activity answer should cover the reference activities, and may include camping. The live music event in D20:4 belongs to John and his family. The charity run in D10:10 is Maria's but is not stated to be with church friends. Do not attribute either unrelated group event to Maria with her church friends; a correct hiking item cannot cancel an explicit person/group error.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa110": {
+      "question": "What exciting news did Maria share on 16 June, 2023?",
+      "original_reference": "joined a gym",
+      "guidance": "The date-restricted news on 16 June 2023 is that Maria joined a gym the previous week, with a positive routine and welcoming people. Accept equivalent summaries and compatible gym details. Do not append a separate charity event as part of that dated news; combining the correct gym fact with a misdated unrelated event is a material factual error.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa72": {
+      "question": "What kind of activities did John and his mates from the online group do as part of their service efforts?",
+      "original_reference": "gave out food and supplies at a homeless shelter, organized a toy drive for kids in need",
+      "guidance": "The online group's described completed service efforts are giving food/supplies at a homeless shelter and organizing a toy drive for children in need. Require these two activities with equivalent wording. The community meeting on education/infrastructure is John's separate future plan in D4:16, not a completed service activity attributed to this online group. Do not accept that extra group/time attribution merely because the two correct activities also appear.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa35": {
+      "question": "What states has Maria vacationed at?",
+      "original_reference": "Oregon, Florida",
+      "guidance": "The requested states for Maria are Oregon and Florida. California in D19:22 belongs to John, not Maria, and Spain is a country, not one of the requested states. Require both Oregon and Florida without falsely adding California or treating Spain as a state. A list that contains the correct pair plus those incorrect entries is not an equivalent correct answer.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_3_qa74": {
+      "question": "What recommendations has Nate received from Joanna?",
+      "original_reference": "A romantic drama about memory and relationships, a fantasy book series, pointers for making living room comfy, starting a cork board for memories, \"Little Women\" movie",
+      "guidance": "Recommendations must actually be from Joanna to Nate. The gold lists a romantic drama about memory/relationships, a fantasy book series, cozy living-room advice, a cork board for memories and Little Women. Inception in D23:17 is something Nate says he already watched; it is not a recommendation from Joanna. An answer attributing Inception to her recommendations is factually wrong even if Little Women or fantasy books also appears. Do not confuse partial supported coverage with an explicit false attribution.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa41": {
+      "question": "Does John live close to a beach or the mountains?",
+      "original_reference": "beach",
+      "guidance": "This category-3 question asks which location is supported as close to John's home. The weekly ocean-sunset walks in D22:15-17 support beach/coast. His separate mountaineering trip in D18:2 does not establish living near mountains. Accept beach/coast; mountains alone or asserting both beach and mountains adds an unsupported residence inference. Treat all word-order variants of both consistently.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa29": {
+      "question": "What events is Maria planning for the homeless shelter funraiser?",
+      "original_reference": "Chili cook-off, ring-toss tournament",
+      "guidance": "The two planned fundraiser events are a chili cook-off and a ring-toss tournament. Require both events; either one alone is an incomplete subset. Wording, order, articles and capitalization do not change this requirement.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa47": {
+      "question": "What exercises has John done?",
+      "original_reference": "Weight training, Circuit training, Kickboxing, yoga",
+      "guidance": "John's documented exercises are weight training, circuit training, kickboxing and yoga, with equivalent names allowed. Aerial yoga is Maria's activity in D1:3, not John's. An answer assigning aerial yoga to John has a person-attribution error; correct yoga/kickboxing items do not cancel it. The plural across-conversation answer should cover the supported set rather than one isolated exercise.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa11": {
+      "question": "What sports does John like besides basketball?",
+      "original_reference": "surfing",
+      "guidance": "Surfing/riding waves is the supported sport besides basketball. Football is not supported and is an incorrect additional sport here. Mentioning the ocean as context for surfing or restating the given basketball interest is not by itself a new false sports claim, but does not substitute for surfing. Reject a list that asserts football as another documented interest.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_4_qa32": {
+      "question": "Which US states might Tim be in during September 2023 based on his plans of visiting Universal Studios?",
+      "original_reference": "California or Florida",
+      "guidance": "This inference question needs an actual US state answer such as California or Florida, or those alternatives. A literal placeholder such as [short answer], [answer], empty text or response-format instructions contains no answer and is WRONG. Do not infer the state yourself and credit a placeholder.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa48": {
+      "question": "Which US state did Jolene visit during her internship?",
+      "original_reference": "Alaska",
+      "guidance": "The requested state is Alaska, inferred from the supplied Mount Talkeetna location. An answer must actually state Alaska or an unambiguous equivalent. A literal [short answer] placeholder, response instructions, N/A or empty text is WRONG; do not substitute your own inference for a missing model answer.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa31": {
+      "question": "What has Andrew done with his dogs?",
+      "original_reference": "Taking walks and hiking",
+      "guidance": "Andrew takes Toby hiking and Buddy on walks; he also adopts his own puppies and buys their bed/toys, and describes using a leash. Accept faithful supported activities beyond the short gold. Pixie is Audrey's puppy, so an answer saying Andrew adopted Pixie is a definite dog/person-attribution error. Audrey, not Andrew, explicitly takes grooming/training courses and describes her May dog road trip; do not transfer those specific experiences to him. However, D28:6 only says he has not taken the dogs to a groomer, not that he has never groomed a dog himself. D16:9 is an earlier conditional statement. D23:11 includes a caption of his pup with a frisbee, so a generic fetch/play claim is not by itself enough to reject the whole answer. Distinguish definite misattribution from plausible generic dog care; do not label every longer answer wrong merely because only walks/hiking appear in the gold.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_5_qa88": {
+      "question": "What advice did Audrey give to Andrew regarding grooming Toby?",
+      "original_reference": "Grooming slowly and gently, paying attention to sensitive areas like ears and paws. And remember to stay patient and positive throughout the grooming process.",
+      "guidance": "Audrey's actual grooming advice is to work slowly and gently, take care around sensitive ears/paws, and stay patient and positive. Accept faithful actionable summaries of this advice. Saying only that she took a course, learned techniques or offered to give tips does not state the advice and is insufficient.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa98": {
+      "question": "What is Max good at doing according to James?",
+      "original_reference": "catching frisbees in mid-air",
+      "guidance": "Max is good at catching frisbees, including in mid-air. The adjacent response describes this as playing fetch. Accept playing fetch, catching/retrieving frisbees, or the more detailed mid-air description; do not require the exact level of detail when the same supported activity is identified.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_6_qa6": {
+      "question": "Does James live in Connecticut?",
+      "original_reference": "Likely yes",
+      "guidance": "The category-3 reference is likely yes, inferred from Stamford; certainty or a direct residence quotation is not required. A qualified likely/probably yes is acceptable. An answer explicitly ending Therefore the answer is No contradicts that conclusion, even if its middle text mentions that Connecticut is implied. Do not credit mutually contradictory yes/no answers simply for containing the reference location.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa59": {
+      "question": "What do Deborah and her husband do together?",
+      "original_reference": "play detective games together, spend time outdoors and explore nature",
+      "guidance": "Deborah and her husband are explicitly described playing detective games and spending time outdoors/exploring nature. Yoga/meditation activities with Jolene or another partner are not documented as husband activities. Require the shared activities supported for this couple; reject an answer that assigns unsupported yoga/meditation practice to the husband even if nature is also mentioned.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa91": {
+      "question": "What music pieces does Deborah listen to during her yoga practice?",
+      "original_reference": "Savana, Sleep",
+      "guidance": "Deborah names Savana and Sleep. Nils Frahm and Olafur Arnalds are what Jolene says she listens to, not Deborah's named tracks. Require the two supported Deborah items; do not assign Jolene's artists to Deborah or infer that they authored Savana from the dialogue. Correct track names do not cancel those added attribution errors.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa25": {
+      "question": "What are Jolene's favorite books?",
+      "original_reference": "Sapiens, Avalanche by Neal Stephenson",
+      "guidance": "The supported book titles are Sapiens and Avalanche by Neal Stephenson, using the names as given in this conversation. The Road is not a supported additional favorite; a photographed notebook with a pen/plant is not a book title. Require the supported pair without adding these unrelated books/objects.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa74": {
+      "question": "What do Deborah and Jolene plan to try when they meet in a new cafe?",
+      "original_reference": "coffee and fresh pastries",
+      "guidance": "They plan to have coffee and try fresh pastries at the cafe. Require both coffee and pastries for what they plan to try there; coffee date, meet for coffee and equivalent coffee-only answers are incomplete in the same way. Do not judge them differently based on phrasing.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa178": {
+      "question": "What positive change did Jolene experience during the retreat?",
+      "original_reference": "finding inner peace",
+      "guidance": "The question does not identify a date or a particular retreat. Jolene's February mini-retreat gave her a new outlook/confidence and engineering-project solutions (D5:1-5); her later meditation retreat brought inner peace and balance (D27:1-3); she also describes a positive yoga-retreat mindset and gratitude in D30:4-6. Accept a faithful positive change from any actually described retreat, including engineering progress together with a new outlook. Do not silently restrict the undated question to the D27 event solely because the gold says inner peace.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa15": {
+      "question": "What pets does Jolene have?",
+      "original_reference": "snakes",
+      "guidance": "Jolene has snakes Susie and Seraphim. Snakes, or those named snakes, answers the question. Luna is Deborah's cat, not Jolene's. An answer adding a cat named Luna to Jolene's pets is factually wrong even when the two correct snakes are also listed.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa68": {
+      "question": "What was Sam doing on December 4, 2023?",
+      "original_reference": "Attending a Weight Watchers meeting",
+      "guidance": "On December4 Sam attended a Weight Watchers meeting, as stated yesterday in the December5 conversation. Require that meeting/event, allowing a clear equivalent name. Generic diet/exercise plans, healthy-snack discussion or changing his routine do not identify what he was doing on that specific date.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa81": {
+      "question": "What is a stress reliever for Evan?",
+      "original_reference": "Drawing, traveling, places with a beautiful view, yoga, sunsets or something comfortable for Evan",
+      "guidance": "Painting/drawing is explicitly a stress reliever for Evan. He also says exercise clears the mind and describes calming yoga/beach exercise. Painting and exercise is a supported answer. The question asks for a stress reliever, not every item in the long reference; one supported stress-relieving activity is sufficient.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_8_qa137": {
+      "question": "Who helped Evan get the painting published in the exhibition?",
+      "original_reference": "a close friend",
+      "guidance": "The helper is Evan's close friend: Evan says a close friend of mine. A close friend without a possessive is fine. Sam's close friend changes the person attribution and is not an equivalent answer.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_2_qa148": {
+      "question": "How is Maria's new puppy adjusting to its new home?",
+      "original_reference": "doing great - learning commands and house training",
+      "guidance": "The undated question says Maria's new puppy without specifying a name. Coco is newly introduced in D30 and is happy, greets Maria and brings joy; Shadow is newly introduced in D31 and is doing great, learning commands and house training. Accept an overall positive-adjustment answer for either actually introduced new puppy; naming Coco alone is not grounds for rejection under the undated wording. Do not transfer Shadow-specific commands/house-training details to Coco when explicitly named. The narrow gold comes from Shadow's exchange but must not silently add a date/name absent from the question.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa90": {
+      "question": "How does Calvin describe his process of adding electronic elements to his songs?",
+      "original_reference": "gives them a fresh vibe",
+      "guidance": "Calvin describes adding electronic elements as giving the songs a fresh vibe and as part of an exciting process of self-discovery/growth through experimenting with genres. Either faithful description answers how he describes the process. Do not require the exact fresh-vibe phrase or reject the directly supported self-discovery/growth description.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa96": {
+      "question": "What type of car did Dave work on during the workshop?",
+      "original_reference": "classic muscle car",
+      "guidance": "The workshop car is described as a classic muscle car, and the supplied caption identifies a silver Corvette. Accept the general classic muscle car description or Corvette. Vintage Mustang is a different specific model unsupported by this workshop evidence; being in a similar broad car category does not make a different named model correct.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa118": {
+      "question": "What do Calvin and Dave use to reach their goals?",
+      "original_reference": "Hard work and determination",
+      "guidance": "Hard work, dedication, persistence and determination express the supported effort they use toward goals. Accept dedication as a concise equivalent of sustained effort/determination, including passion and dedication; do not demand the exact pair hard work and determination. A generic positive feeling without an effort/persistence component is not sufficient.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_9_qa93": {
+      "question": "What is Dave's advice to Calvin regarding his dreams?",
+      "original_reference": "to never forget his dreams",
+      "guidance": "Dave encourages Calvin to keep at it, keep pursuing his goals and never forget his dreams. Keep pursuing your passion/passions, with or without supported effort/dedication wording, is an equivalent encouragement. Singular/plural passion and compatible wording such as stay true to yourself do not change that core advice.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa120": {
+      "question": "What did Jolene and Deb discuss as a helpful strategy for studying and time management?",
+      "original_reference": "breaking tasks into smaller pieces and setting goals, using planners or schedulers",
+      "guidance": "The question gives no date or specific conversation anchor. The speakers discuss breaking tasks into smaller pieces, setting goals, planners/schedules/to-do lists, and the Pomodoro Technique (25 minutes work and a 5-minute break to avoid burnout). Accept a faithful helpful strategy from these discussions, including Pomodoro. Do not silently restrict the undated question to D8. The unsupported Eisenhower Matrix is not interchangeable with these techniques.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa1": {
+      "question": "Which of Deborah`s family and friends have passed away?",
+      "original_reference": "mother, father, her friend Karlie",
+      "guidance": "This multi-person question asks which family and friends have passed away. The supported set includes Deborah's mother, father, and friend Karlie. An answer naming only the two parents omits the friend and is incomplete; apply that completeness rule uniformly regardless of possessives or sentence wording. Accept equivalent family terms and the friend identified as Karlie.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa142": {
+      "question": "How does Jolene describe the feeling of finding her snake snuggled under the bed after it got out?",
+      "original_reference": "It really showed how much she loves her.",
+      "guidance": "Jolene explicitly says she was so relieved when she found the snake under the bed and that it showed how much she loved her. Accept relief, love, or a faithful emotional paraphrase about this reunion. Relief with gratitude is compatible; do not require the answer to contain the exact love phrase. Gratitude itself is a paraphrase rather than a verbatim word in this evidence.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa131": {
+      "question": "How does Jolene describe the time spent with her snakes and partner?",
+      "original_reference": "Valuable and relaxing",
+      "guidance": "Jolene values time with her snakes as personally grounding, and finds gaming with her partner relaxing and connecting. Comfort and joy with a positive bond/connection is an acceptable concise paraphrase of this valued, relaxing shared time. Apply the same standard to equivalent comfort/joy/bond answers, without requiring the exact words valuable and relaxing. A claim of conflict or stress would contradict the described experience.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_7_qa20": {
+      "question": "Which games did Jolene mention playing or planning to play with her partner?",
+      "original_reference": "Detroit, Walking Dead, It Takes Two, Overcooked 2",
+      "guidance": "This multi-session enumeration asks which games Jolene mentioned playing or planning with her partner. Require the supported set Detroit (Detroit: Become Human is an acceptable title), Walking Dead, It Takes Two, and Overcooked 2. Listing only two or three of these is incomplete. Apply the same completeness rule to all answer phrasings; compatible title formatting is irrelevant.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260921-v2"
+    },
+    "locomo_0_qa60": {
+      "question": "What instruments does Melanie play?",
+      "original_reference": "clarinet and violin",
+      "guidance": "The question asks for the instruments Melanie plays across the conversation. A complete correct answer must include BOTH clarinet and violin. The order and ordinary phrasing do not matter. Clarinet alone or violin alone is incomplete. Piano belongs to Caroline in D5:5, not Melanie; adding piano as an instrument Melanie plays makes the answer wrong even if both required instruments are also listed. An image caption about a man at a piano in D15:24 does not establish that Melanie plays piano. Do not infer a playing skill merely from an image.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260922-v3"
+    },
+    "locomo_0_qa78": {
+      "question": "What items has Melanie bought?",
+      "original_reference": "Figurines, shoes",
+      "guidance": "The complete supported purchases are figurines and shoes. Figurines, wooden dolls, and small wooden figures are acceptable names for the SAME object shown with D19:2; shoes/sneakers cover the other required item in D7:18. Both purchase categories are required. Listing figurines and wooden dolls alone still omits shoes. A photo of figurines is not evidence that she bought a photograph. The clock caption at D19:11 and the happiness painting caption at D19:15 accompany Caroline's turns, and neither establishes a purchase by Melanie. Do not accept those as Melanie's additional purchases. Other unsupported substantive purchase claims make the answer wrong; unrelated harmless wording does not.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260922-v3"
+    },
+    "locomo_3_qa63": {
+      "question": "What video games does Nate play?",
+      "original_reference": "Valorant, Counter Strike:Global Offensive,Xenoblade Chronicles, StreetFighter, Cyberpunk 2077",
+      "guidance": "This question asks for Nate's games across the conversation. Apply one completeness rule to every answer: all FIVE supported games are required: Valorant; Counter-Strike: Global Offensive (CS:GO/CSGO); Street Fighter; Cyberpunk 2077; and Xenoblade Chronicles. The source itself spells the last title \"Xeonoblade Chronicles\", so accept that spelling as well. Ignore harmless punctuation, spacing, order, and names already fixed by the question. Do not require dates, tournament results, or platforms. A subset of one through four games is incomplete even though each listed game may be correct; do not accept a one-game or three-game list while rejecting a different two-game list. Inception is a movie, not one of Nate's games. Unsupported additional game titles are wrong additions.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260922-v3"
+    },
+    "locomo_5_qa121": {
+      "question": "What is Andrew planning to do with Scout, Toby, and Buddy?",
+      "original_reference": "Take them to a nearby park",
+      "guidance": "The stated plan in D28:10 is to take Scout, Toby, and Buddy to a nearby park. Require the park outing: \"go to the park\", \"take them to a local park\", and equivalent concise answers are correct. The dog names and the word nearby need not be repeated. Fun, exercise, and fresh air are optional purposes, not substitutes for the action/destination: answers saying only \"have fun and get some fresh air\", \"have a fun and fresh air day\", or \"go outdoors\" are incomplete and should be judged consistently. A bare \"take a hike\" also omits the stated park. An answer that correctly states the park outing may use generic walk/outing wording, but must not invent a different destination or substantive separate event.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260922-v3"
+    },
+    "locomo_6_qa44": {
+      "question": "Why didn't John want to go to Starbucks?",
+      "original_reference": "Possibly because he likes to drink beer on his days off.",
+      "guidance": "Use the following conversation facts and acceptance rules together; do not infer additional requirements from the short reference.\nEvidence in order: D21:13 James: \"we can go to Starbucks for coffee\". D21:14 John: \"I don't mind meeting up, but why Starbucks? Maybe we can have a beer somewhere?\" D21:15 James: \"how about we go to McGee's pub then? I heard they serve a great stout there!\" D21:16 John: \"Great idea, except I don't like dark beer. Maybe there's something else there?\" D21:17 James: \"Of course, there are also light beers!\" D21:18 John: \"Great, then I agree! See you tomorrow at McGee's Pub!\"\nRequired answer content: John wanted BEER as the alternative to the Starbucks coffee plan. A concise \"beer\", \"light beer(s)\", \"wanted/preferred light beer\", or the explanation that McGee's has light beers is sufficient. His preference for light beer, dislike of dark beer, and willingness/desire to go to McGee's are all supported. Combinations of these true preferences are CORRECT when the beer alternative is expressed. For example, \"he preferred a light beer and wanted to avoid dark beer\", \"he wanted light beer at McGee's\", and \"he didn't like dark beer and wanted a place with light beers instead\" are acceptable. Wanting or agreeing to a venue is not claiming to have originally suggested it. The answer need not repeat coffee, Starbucks, the day off, or all intervening dialogue.\nWrong-answer boundaries: a bare venue name or \"he dislikes dark beer\" without a beer alternative does not explain rejecting Starbucks. Wanting dark beer, alleging that Starbucks serves dark beer, or claiming he dislikes coffee contradicts or invents evidence. Separately, reject an explicit wrong attribution of who made a conversational statement: James, not John, asserted \"there are also light beers\". Thus \"he suggested there are also light beers\" attributes James's statement to John and is WRONG. This speaker-attribution rule applies to claims that John SAID or ORIGINATED that suggestion; it does not apply to descriptions of John's own true preferences, acceptance, or intended destination. Do not reject supported preference answers for failing to name James or for using an alternative phrasing.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260922-v3.2"
+    },
+    "locomo_0_qa74": {
+      "question": "When did Melanie's family go on a roadtrip?",
+      "original_reference": "The weekend before 20 October 2023",
+      "guidance": "On 20 October 2023, Melanie said the family roadtrip happened this past weekend. The supported period is the preceding weekend, 14-15 October 2023. Accept that relative weekend, the corresponding weekend range, or a reasonable date-level approximation that preserves this weekend meaning. The generation question permits an approximate date, so do not require an exact day or the literal word approximately. October 20 is the conversation date, not the trip date. October 13 is Friday and is not the stated Saturday-Sunday weekend; do not turn it into the correct weekend merely by applying an unstated one-day tolerance. No hour or minute is known; an asserted event timestamp such as 10:31 am is unsupported and must not be accepted as factual event timing.",
+      "prompt_version": "locomo-posthoc-question-guidance-20260922-v3"
+    }
+  }
+}

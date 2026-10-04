@@ -1,0 +1,107 @@
+{
+  "package": "MCC-OPD training and evaluation code",
+  "scope": "MCC-OPD on verl v0.9.0 with one training preset and four-benchmark evaluation",
+  "upstream_repository": "https://github.com/verl-project/verl",
+  "upstream_tag": "v0.9.0",
+  "upstream_revision": "483b8a009ba3a97563edee3a19887e4862b8094a",
+  "upstream_archive_sha256": "e30f6cc0c09a3e919415a569a529e04f6522b9259c03c95d65ad6d70c380fba8",
+  "upstream_archive_url": "https://codeload.github.com/verl-project/verl/tar.gz/483b8a009ba3a97563edee3a19887e4862b8094a",
+  "excluded_upstream_roots": [
+    ".agent",
+    ".claude",
+    ".codex",
+    ".git-blame-ignore-revs",
+    ".github",
+    ".gitignore",
+    ".gitmodules",
+    ".pre-commit-config.yaml",
+    ".readthedocs.yaml",
+    ".vscode",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "recipe"
+  ],
+  "mcc_patch_sha256": "2d288e40bf96fb385321d679181109e59b0ff23c7af5f19b9786e17abec71c2a",
+  "paper_settings": {
+    "schema": "mcc-opd-paper-reference/v1",
+    "status": "recorded_experiment_settings_not_an_upstream_verl_launcher_config",
+    "method": "MCC-OPD",
+    "student": "Qwen/Qwen3-1.7B",
+    "teacher": "Qwen/Qwen3-8B",
+    "framework": {
+      "name": "verl",
+      "tag": "v0.9.0",
+      "upstream_revision": "483b8a009ba3a97563edee3a19887e4862b8094a"
+    },
+    "training": {
+      "train_benchmark": "locomo",
+      "train_questions": 140,
+      "val_questions": 77,
+      "seed": 45,
+      "rollout_n": 4,
+      "alpha": 1.5,
+      "topk": 64,
+      "chunk_size": 128,
+      "question_batch_size": 16,
+      "micro_batch_size_per_gpu": 1,
+      "epochs": 3,
+      "updates": 27,
+      "ppo_epochs": 1,
+      "optimizer": "AdamW",
+      "learning_rate": 2e-06,
+      "lr_scheduler_type": "constant",
+      "warmup_ratio": 0.1,
+      "weight_decay": 0.01,
+      "optimizer_betas": [
+        0.9,
+        0.999
+      ],
+      "grad_clip": 1.0,
+      "max_prompt_tokens": 28672,
+      "max_response_tokens": 4096,
+      "max_model_len": 32768,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": -1,
+      "attention_backend": "sdpa",
+      "use_remove_padding": false,
+      "nodes": 1,
+      "gpus_per_node": 8,
+      "save_frequency": 9,
+      "validation_frequency": 9,
+      "paper_checkpoint_step": 27,
+      "use_answer_reward_for_mcc_loss": false,
+      "enable_thinking": false
+    },
+    "evaluation": {
+      "locomo": {
+        "questions": 1192,
+        "context_window": 32768,
+        "generation_cap": 4096
+      },
+      "realtalk": {
+        "questions": 728,
+        "context_window": 40960,
+        "generation_cap": 2560
+      },
+      "musique": {
+        "questions": 2172,
+        "context_window": 12288,
+        "generation_cap": 4096
+      },
+      "longmemeval": {
+        "questions": 499,
+        "context_window": 32768,
+        "generation_cap": 4096,
+        "evidence_view": "Stella R60 with five question-specific evidence repairs"
+      }
+    },
+    "notes": [
+      "The training configuration is transcribed from the completed paper run, not a proposed default.",
+      "Legacy native_outcome_gamma and native_outcome_l_ref fields are not MCC loss hyperparameters.",
+      "The executable preset is configs/mcc_opd.yaml in the separate MCC-OPD training package.",
+      "Evaluation settings record the paper protocol; the training package supplies test inputs without evaluation runners."
+    ],
+    "source_config_sha256": "4622292ed87bf1b50ad51157043b55900ecbf6b0d70ed4775a28ee9bda7c5f66"
+  }
+}

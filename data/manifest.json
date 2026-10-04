@@ -1,0 +1,307 @@
+{
+  "format": "MCC-OPD prepared data v2",
+  "tokenizer": "Qwen/Qwen3-1.7B (enable_thinking=False)",
+  "training_parquet": "byte-identical to the paper's train/val inputs",
+  "test_export": "original prompts, questions and references; portable metadata",
+  "longmemeval_order": "60 + 25 + repaired 414; all test for LoCoMo-only training",
+  "revisions": {
+    "locomo": {
+      "comparison": "Upstream categories 1-4 -> train140/val77/test1192; source conversations unchanged.",
+      "before_rows": 1540,
+      "released_rows": 1409,
+      "status_counts": {
+        "unchanged": 1203,
+        "revised": 206,
+        "removed": 131,
+        "added": 0
+      },
+      "compared_fields": [
+        "question",
+        "answer",
+        "category",
+        "evidence"
+      ]
+    },
+    "realtalk": {
+      "comparison": "Upstream728 -> released728; conversations, captions and evidence pointers unchanged.",
+      "before_rows": 728,
+      "released_rows": 728,
+      "status_counts": {
+        "unchanged": 725,
+        "revised": 3,
+        "removed": 0,
+        "added": 0
+      },
+      "compared_fields": [
+        "question",
+        "answer",
+        "accepted_answers",
+        "answer_aliases",
+        "category",
+        "evidence"
+      ]
+    },
+    "musique": {
+      "comparison": "Official MuSiQue-Ans dev2417 -> test2172; full paragraph order retained.",
+      "before_rows": 2417,
+      "released_rows": 2172,
+      "status_counts": {
+        "unchanged": 2063,
+        "revised": 109,
+        "removed": 245,
+        "added": 0
+      },
+      "compared_fields": [
+        "question",
+        "answer",
+        "answer_aliases",
+        "paragraphs",
+        "question_decomposition"
+      ]
+    },
+    "longmemeval": {
+      "comparison": "Frozen R60 inputs500 -> released499; QA corrections and source-turn supplements.",
+      "before_rows": 500,
+      "released_rows": 499,
+      "status_counts": {
+        "unchanged": 491,
+        "revised": 8,
+        "removed": 1,
+        "added": 0
+      },
+      "compared_fields": [
+        "question",
+        "answer",
+        "question_type",
+        "question_date",
+        "evidence_session_ids",
+        "retrieved_memories",
+        "history_string"
+      ]
+    }
+  },
+  "files": {
+    "locomo/train.parquet": {
+      "rows": 140,
+      "sha256": "12055546b30482030ef38d2f35ffa12776f294c35b1c3178e95e2b6b6f3a45cf",
+      "ordered_question_ids_sha256": "4251e8db390f7e3a1d8c31ec0137a9e33ca33840c26222b2ee2d4d5c3bf5da7d"
+    },
+    "locomo/val.parquet": {
+      "rows": 77,
+      "sha256": "d33e65845b38c756a3f587b91161af4208ff717dc656a4f2fd7472b055188c66",
+      "ordered_question_ids_sha256": "df2e34dd5cff55bbd82f8a11c89c5b51f29a83eb6e7075b91ac68e21bd5d8bb9"
+    },
+    "locomo/test.jsonl.gz": {
+      "rows": 1192,
+      "sha256": "5f518c97a788d2cb1b627afcb86b782a27128a4c196e7a2f44aa9c0319609ec4",
+      "ordered_question_ids_sha256": "36e51c26ce3104f3a9fc46946614b064ab9d7cecdc2ac0a552bb57840ea3f547"
+    },
+    "musique/test.jsonl.gz": {
+      "rows": 2172,
+      "sha256": "a13e1ff923aa81f330c2500f6cb5e4f9aef88b05fa03bab24b347cf542f07252",
+      "ordered_question_ids_sha256": "761aaf61252a1d46e25059508d618e0cc525425192dbc4add30c87bfbd32bcad"
+    },
+    "longmemeval/test.jsonl.gz": {
+      "rows": 499,
+      "sha256": "894406ec93a4281fea3d6fc684b1138f10e5236c8ae3ef589ca296a9a3ba0e1c",
+      "ordered_question_ids_sha256": "82d7a15d1c6716442fcfdf24054c3d798bcb8483049dbace4829f61932c2da8e"
+    },
+    "locomo/source-original/locomo10.json": {
+      "sha256": "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4",
+      "source": "data/external/rl-memory-curriculum/data/raw/locomo/data/locomo10.json"
+    },
+    "locomo/before.jsonl.gz": {
+      "rows": 1540,
+      "sha256": "7048fd5d7b5f1a3f95d7780e58bf19fb593845fc9cf491dd50809c2b5de8212f",
+      "ordered_question_ids_sha256": "88a709778448a5690ad536a75df68f2905f08e126170b2e51ba738a9183269c4"
+    },
+    "locomo/changes.jsonl.gz": {
+      "rows": 1540,
+      "sha256": "046e0a6b5927f1d5f32f8f98b919c2a707a166f787f092e6d7fad35947c6226c",
+      "ordered_question_ids_sha256": "88a709778448a5690ad536a75df68f2905f08e126170b2e51ba738a9183269c4"
+    },
+    "locomo/revisions/locomo_caption_repairs_20260920.json": {
+      "sha256": "c8fe6e3df2014007cd7b9fb935ddab9ef2c0a91f954b7bd7580e2f09fd5e317e",
+      "source": "configs/data/locomo_caption_repairs_20260920.json"
+    },
+    "locomo/revisions/locomo_semantic_review_20260920.json": {
+      "sha256": "ddff876625068d04d8b8f4a146765a5be7b7828fdcf3fa53b19b03d72de9b6f8",
+      "source": "configs/data/locomo_semantic_review_20260920.json"
+    },
+    "locomo/revisions/locomo_test_citation_repairs_20260920.json": {
+      "sha256": "35b9afd8993cc1d01e6ac85133d75689ba6c9d1cc0f587d90c7b68e56ac72cf1",
+      "source": "configs/data/locomo_test_citation_repairs_20260920.json"
+    },
+    "locomo/revisions/locomo_test_qa_repairs_20260920.json": {
+      "sha256": "7f5d84edb839527f431af16f8c86015693f6ffaeddddff18e0429c7b66a95408",
+      "source": "configs/data/locomo_test_qa_repairs_20260920.json"
+    },
+    "locomo/revisions/locomo_test_disambiguation_20260920.json": {
+      "sha256": "be266047a082dbf9cc42ba0a77819e5ff5e8948d8da4d67b6fc115d6166d3d9b",
+      "source": "configs/data/locomo_test_disambiguation_20260920.json"
+    },
+    "locomo/revisions/locomo_test_audit_repairs_20260921.json": {
+      "sha256": "e369a123d0e159ec918ee13aba1d719359b99b9fd4da1141a5b7dcaa3aed065a",
+      "source": "configs/data/locomo_test_audit_repairs_20260921.json"
+    },
+    "locomo/revisions/initial-exclusions.jsonl": {
+      "sha256": "1c4fef8f366005fab4814eef686817289df64794ba704afe0380aa448a8f1de6",
+      "source": "data/benchmarks/locomo/metadata/exclusions.jsonl"
+    },
+    "locomo/revisions/train-reference-decisions.jsonl": {
+      "sha256": "b4cb54ea5c0e961de863137d25dc7096bddf99766a43b2fbf3ccf2e033959674",
+      "source": "data/benchmarks/locomo/revisions/clean-full-train-reference-20260921/decisions.jsonl"
+    },
+    "musique/before.jsonl.gz": {
+      "rows": 2417,
+      "sha256": "2367e05e73cbb36628557581310a69dfb0f1dc8c8d37c6102998b30c8b95ecb5",
+      "ordered_question_ids_sha256": "bad4f9b18a7abb8e475b7285db2c370540b9a4aa51770ce553056e9b0761ce46"
+    },
+    "musique/changes.jsonl.gz": {
+      "rows": 2417,
+      "sha256": "1d7ddafed9dd5165776568e44fbd9e11c2eb281f185dd0bad853d85b822f2ec9",
+      "ordered_question_ids_sha256": "bad4f9b18a7abb8e475b7285db2c370540b9a4aa51770ce553056e9b0761ce46"
+    },
+    "musique/revisions/dispositions.jsonl.gz": {
+      "rows": 2417,
+      "sha256": "9e6b1fa30a7de2d6432fd39163972a9ca323e08468eecbac3566590c423cf531",
+      "ordered_question_ids_sha256": "bad4f9b18a7abb8e475b7285db2c370540b9a4aa51770ce553056e9b0761ce46",
+      "source": "data/benchmarks/musique/revisions/consolidated-20260916/dispositions.jsonl",
+      "selection": "split == test"
+    },
+    "musique/revisions/intent-decisions.jsonl.gz": {
+      "rows": 57,
+      "sha256": "3438200d389799fe910cc0021e871ca99887f3f20be3562d46a4b84091f90f2c",
+      "ordered_question_ids_sha256": "58c61a8bbc5fd6b480405c6cf8a4b362b3b59ff416c192854fd50d9c02de7a0f",
+      "source": "artifacts/data-preparation/musique-intent-review-20260917/decisions.jsonl",
+      "selection": "split == test"
+    },
+    "longmemeval/before.jsonl.gz": {
+      "rows": 500,
+      "sha256": "7dc66e02d61b0935020e5252c1f15a3cb32a82fd87cd9030c7c6805b09b6681b",
+      "ordered_question_ids_sha256": "79ec329f19dda34a514493e1a77f28c0a9410611c7838ab87a8b09f89f8fa6f6"
+    },
+    "longmemeval/changes.jsonl.gz": {
+      "rows": 500,
+      "sha256": "2e88b74877a16f13de4fb64996c8b314a07d6a65da90f24890b9bea1ea7a37dd",
+      "ordered_question_ids_sha256": "79ec329f19dda34a514493e1a77f28c0a9410611c7838ab87a8b09f89f8fa6f6"
+    },
+    "longmemeval/revisions/lme_test_evidence_repairs_20260922.json": {
+      "sha256": "e1200770f8742e5aa66565dd3c8330db63651ac291429382f49d60051211db83",
+      "source": "configs/data/lme_test_evidence_repairs_20260922.json"
+    }
+  },
+  "source_sha256": {
+    "data/training/memory_cf_increment/20260921-locomo-train-reference/locomo_full/train.parquet": "12055546b30482030ef38d2f35ffa12776f294c35b1c3178e95e2b6b6f3a45cf",
+    "data/training/memory_cf_increment/20260920-locomo-semantic/locomo_full/val.parquet": "d33e65845b38c756a3f587b91161af4208ff717dc656a4f2fd7472b055188c66",
+    "data/training/memory_cf_increment/20260921-locomo-test-audit/locomo_full/test.parquet": "937680dce8b707e017d668ce998d51995f26cc6782c8396c6154d078057461e4",
+    "data/benchmarks/locomo/revisions/clean-full-test-audit-20260921/test.jsonl.gz": "607ec9ff21f3d9ee096a176eda158b38cccfa068e4186668cca1d5d2696c60b5",
+    "data/derived/realtalk/full-caption-time-r1-20260924/test.jsonl.gz": "a14bc74c3084673c0e25500b19eb1fead3ca82cba34f514eb3f2c448d7521a99",
+    "data/derived/realtalk/full-caption-time-r1-20260924/eval-inputs.jsonl.gz": "aa0d3363b3dfd1d3f1e97be8274423c955a24a6496a97cade7bb23b9c3474bc4",
+    "scripts/eval/musique_unofficial/protocol.py": "5158a9fa6cc688e2714b4b02df49e0f7775c31118f57cab59af604f016f8593a",
+    "data/benchmarks/musique/revisions/consolidated-20260916/test.jsonl": "f668ed1b97c9d7f99ce9e38665d755225b7bf44b9687aab5338284db50c8ae5a",
+    "data/training/memory_cf_increment/20260919/lme_R60/train.parquet": "0e0f512d68c76e1399a216bd03d86916b2ebc331e5150dd769f9082c37a79707",
+    "data/benchmarks/longmemeval/r60/train.jsonl": "6ada2a64d8f88e6b7c4045c9400fdde853a7d08beb1c991754b9fe85b9428d9f",
+    "data/training/memory_cf_increment/20260919/lme_R60/val.parquet": "a3a1fbbacb72d50ac3896501590f7847bcd6a01b09b5b2fc532ceeb8c22f6feb",
+    "data/benchmarks/longmemeval/r60/val.jsonl": "c2229e55c63b95fb2051cc270c0660b000282b6c26e410486d3d1f95cc34cd9a",
+    "data/training/memory_cf_increment/20260922-lme-test-evidence-repair/lme_R60/test.parquet": "4dd80935572ae57fb4690164bb76a0121ac052a6d480c179b0ad3bcf99c79d92",
+    "data/benchmarks/longmemeval/revisions/r60-test-evidence-repair-20260922/test.jsonl.gz": "dff175687f2dc88f8cb4f895ab06b55a03dd3376cb78e86f1c6fda886dfa553b",
+    "data/external/rl-memory-curriculum/data/raw/locomo/data/locomo10.json": "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4",
+    "data/benchmarks/locomo/revisions/clean-full-train-reference-20260921/train.jsonl.gz": "b0a9b3e699b14d2c2ee54cf0069e374951505f8b4b0ddbbe0e8d2b72c444593b",
+    "data/benchmarks/locomo/revisions/clean-full-semantic-20260920/val.jsonl.gz": "9a2aa7d14199b759405d0161a4a48d17b52ee2f3ed9ed47c6bf5b91d874b3673",
+    "configs/data/locomo_caption_repairs_20260920.json": "c8fe6e3df2014007cd7b9fb935ddab9ef2c0a91f954b7bd7580e2f09fd5e317e",
+    "configs/data/locomo_semantic_review_20260920.json": "ddff876625068d04d8b8f4a146765a5be7b7828fdcf3fa53b19b03d72de9b6f8",
+    "configs/data/locomo_test_citation_repairs_20260920.json": "35b9afd8993cc1d01e6ac85133d75689ba6c9d1cc0f587d90c7b68e56ac72cf1",
+    "configs/data/locomo_test_qa_repairs_20260920.json": "7f5d84edb839527f431af16f8c86015693f6ffaeddddff18e0429c7b66a95408",
+    "configs/data/locomo_test_disambiguation_20260920.json": "be266047a082dbf9cc42ba0a77819e5ff5e8948d8da4d67b6fc115d6166d3d9b",
+    "configs/data/locomo_test_audit_repairs_20260921.json": "e369a123d0e159ec918ee13aba1d719359b99b9fd4da1141a5b7dcaa3aed065a",
+    "data/benchmarks/locomo/metadata/exclusions.jsonl": "1c4fef8f366005fab4814eef686817289df64794ba704afe0380aa448a8f1de6",
+    "data/benchmarks/locomo/revisions/clean-full-train-reference-20260921/decisions.jsonl": "b4cb54ea5c0e961de863137d25dc7096bddf99766a43b2fbf3ccf2e033959674",
+    "data/derived/realtalk/full-caption-time-r1-20260924/test.source-reference.jsonl.gz": "2bf3456af78a03c79d160d73f3dba34f23eda28bcf0bba153b1b765e51b6c8c5",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_10_Fahim_Muhhamed.json": "26135a9e3482f40bea4c71de570a2d994a361848111067e60587be1dd82a0127",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_1_Emi_Elise.json": "4e947998a751a1ba2c3710fc873b90fbcbc234fda7a5e4e75db2b762e0f25a36",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_2_Kevin_Elise.json": "4ac6e319c206731aa9a025c93325eb1edb43686cf39473f058c87ae7deb2d62a",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_3_Kevin_Paola.json": "10c9208016538cbe7a28aafa6cfd72587b072677964c36ec242159fdf58961f2",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_4_Emi_Paola.json": "80aa012ed6a918f5b317bd942b4d4811a158d27a6e07b7a5c6182994107a9367",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_5_Nicolas_Nebraas.json": "32dd7c45786b1a26861dc1574a1bb698a855196fd2ae3fc0c091f3c9ab2d6d06",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_6_Vanessa_Nicolas.json": "9d5ee072ab5a0667ef71d5644d7cd3a4c6777a1e6e2252bf306f310d982e40ac",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_7_Nebraas_Vanessa.json": "b5716bb093217980e747dec0d98996829b569febc09587a025efc6b79806e9ce",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_8_Akib_Muhhamed.json": "814f64ad7e8a46f0398f550fe84184e2ba495a292290b9ff96ffc95448280800",
+    "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_9_Fahim_Akib.json": "05b9b4331bf0e25a2a64dc89c404622c83a61ab5e7c935fb7d844449caf6dd39",
+    "artifacts/analysis/data_preparation/20260924/realtalk/reference-decisions.json": "6a72c030eff5694c83143c725ffaeed8e42bed2bf7874bad07e66ea94978c661",
+    "data/external/musique/musique_v1.0.zip": "98f839bf2fd5319f5c688aed77901a6d5c30b3b9f9f691ab9a8ecafb045ee0cd",
+    "data/benchmarks/musique/revisions/consolidated-20260916/dispositions.jsonl": "688f9b62a7105b4717d5ea5aed601a096a7f1edf50697621db0d129ba03f5b39",
+    "artifacts/data-preparation/musique-intent-review-20260917/decisions.jsonl": "a937e290d4921f281ecf8855898977930e9bf312c4d0c314abc4032c947d2a94",
+    "data/benchmarks/longmemeval/r60/test.jsonl": "74b1d5fdc7ebbec80203adecca4b7cc99b5da91b86cb995ff3e93969d223290c",
+    "configs/data/lme_test_evidence_repairs_20260922.json": "e1200770f8742e5aa66565dd3c8330db63651ac291429382f49d60051211db83"
+  },
+  "locally_prepared_files": {
+    "realtalk/test.jsonl.gz": {
+      "rows": 728,
+      "sha256": "cbccea197a801d6b53d0d6ed1b653082e637158b0a63f88aa899827c626e4de4",
+      "ordered_question_ids_sha256": "78671358dccf60c5b37e7f2fb455fba040be9cc1aded729dd1c23e4a8a5f6d96"
+    },
+    "realtalk/source-original/Chat_10_Fahim_Muhhamed.json": {
+      "sha256": "26135a9e3482f40bea4c71de570a2d994a361848111067e60587be1dd82a0127",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_10_Fahim_Muhhamed.json"
+    },
+    "realtalk/source-original/Chat_1_Emi_Elise.json": {
+      "sha256": "4e947998a751a1ba2c3710fc873b90fbcbc234fda7a5e4e75db2b762e0f25a36",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_1_Emi_Elise.json"
+    },
+    "realtalk/source-original/Chat_2_Kevin_Elise.json": {
+      "sha256": "4ac6e319c206731aa9a025c93325eb1edb43686cf39473f058c87ae7deb2d62a",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_2_Kevin_Elise.json"
+    },
+    "realtalk/source-original/Chat_3_Kevin_Paola.json": {
+      "sha256": "10c9208016538cbe7a28aafa6cfd72587b072677964c36ec242159fdf58961f2",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_3_Kevin_Paola.json"
+    },
+    "realtalk/source-original/Chat_4_Emi_Paola.json": {
+      "sha256": "80aa012ed6a918f5b317bd942b4d4811a158d27a6e07b7a5c6182994107a9367",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_4_Emi_Paola.json"
+    },
+    "realtalk/source-original/Chat_5_Nicolas_Nebraas.json": {
+      "sha256": "32dd7c45786b1a26861dc1574a1bb698a855196fd2ae3fc0c091f3c9ab2d6d06",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_5_Nicolas_Nebraas.json"
+    },
+    "realtalk/source-original/Chat_6_Vanessa_Nicolas.json": {
+      "sha256": "9d5ee072ab5a0667ef71d5644d7cd3a4c6777a1e6e2252bf306f310d982e40ac",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_6_Vanessa_Nicolas.json"
+    },
+    "realtalk/source-original/Chat_7_Nebraas_Vanessa.json": {
+      "sha256": "b5716bb093217980e747dec0d98996829b569febc09587a025efc6b79806e9ce",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_7_Nebraas_Vanessa.json"
+    },
+    "realtalk/source-original/Chat_8_Akib_Muhhamed.json": {
+      "sha256": "814f64ad7e8a46f0398f550fe84184e2ba495a292290b9ff96ffc95448280800",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_8_Akib_Muhhamed.json"
+    },
+    "realtalk/source-original/Chat_9_Fahim_Akib.json": {
+      "sha256": "05b9b4331bf0e25a2a64dc89c404622c83a61ab5e7c935fb7d844449caf6dd39",
+      "source": "data/derived/realtalk/full-caption-time-r1-20260924/source-original/Chat_9_Fahim_Akib.json"
+    },
+    "realtalk/before.jsonl.gz": {
+      "rows": 728,
+      "sha256": "f1c59836c582d45870b665a7d1cdd46bfe06f68a16b996d9fe0192e3b49fd2ad",
+      "ordered_question_ids_sha256": "78671358dccf60c5b37e7f2fb455fba040be9cc1aded729dd1c23e4a8a5f6d96"
+    },
+    "realtalk/changes.jsonl.gz": {
+      "rows": 728,
+      "sha256": "15cb660c8d9a317b792b94d2592348f31c014db73bdf7b1c33bdb4801bf3cdf4",
+      "ordered_question_ids_sha256": "78671358dccf60c5b37e7f2fb455fba040be9cc1aded729dd1c23e4a8a5f6d96"
+    },
+    "realtalk/revisions/reference-decisions.json": {
+      "sha256": "6a72c030eff5694c83143c725ffaeed8e42bed2bf7874bad07e66ea94978c661",
+      "source": "artifacts/analysis/data_preparation/20260924/realtalk/reference-decisions.json"
+    }
+  },
+  "distribution": {
+    "bundled": [
+      "locomo",
+      "musique",
+      "longmemeval"
+    ],
+    "realtalk": "prepare_realtalk.py from the official source; not redistributed"
+  }
+}

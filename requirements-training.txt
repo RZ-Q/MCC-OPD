@@ -1,0 +1,10 @@
+# 论文实际训练环境；Linux x86_64、Python 3.12、CUDA 12.9 wheels。
+--extra-index-url https://download.pytorch.org/whl/cu129
+torch==2.11.0+cu129
+vllm @ https://github.com/vllm-project/vllm/releases/download/v0.20.0/vllm-0.20.0%2Bcu129-cp38-abi3-manylinux_2_31_x86_64.whl
+transformers==5.8.0
+ray[default]==2.56.0
+tensordict==0.10.0
+TransferQueue==0.1.8
+nltk==3.10.3
+-e ./verl

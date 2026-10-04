@@ -1,0 +1,2 @@
+# Tensor-level MCC-OPD core. Install the appropriate CPU/CUDA PyTorch build.
+torch>=2.6

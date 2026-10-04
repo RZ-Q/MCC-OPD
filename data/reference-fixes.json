@@ -1,0 +1,62 @@
+[
+  {
+    "question_id": "realtalk_Chat_1_Emi_Elise_qa54",
+    "type": "explicit_date_reference_repair",
+    "accepted_answers": [
+      "15 January 2024"
+    ],
+    "answer_aliases": [
+      "January 15, 2024",
+      "15 Jan 2024",
+      "15.01.2024"
+    ],
+    "reason": "D12:8 明说 took this photo today；turn 日期与照片文件时间均为 15 Jan，原 gold 的 17 Jan 与直接证据不符。题面和全文不变。",
+    "supporting_turn_ids": [
+      "D12:8"
+    ]
+  },
+  {
+    "question_id": "realtalk_Chat_3_Kevin_Paola_qa17",
+    "type": "duplicate_question_date_reference_repair",
+    "accepted_answers": [
+      "12 January 2024",
+      "19 January 2024"
+    ],
+    "answer_aliases": [
+      "January 12, 2024",
+      "12 Jan 2024",
+      "12.01.2024",
+      "January 19, 2024",
+      "19 Jan 2024",
+      "19.01.2024"
+    ],
+    "reason": "与 qa42 题面相同，接受相同的两条直接证据日期。原 evidence D4:27 的实际 turn 日期为 12 Jan，与原 gold 的 10 Jan 不符；完整题面同样允许D11:2 的 19 Jan。保留独立题号，不去重人口。",
+    "judge_rule": "Either supported date is acceptable; both dates are not required.",
+    "supporting_turn_ids": [
+      "D4:27",
+      "D11:2"
+    ]
+  },
+  {
+    "question_id": "realtalk_Chat_3_Kevin_Paola_qa42",
+    "type": "ambiguous_reference_id_replaced_with_supported_alternatives",
+    "accepted_answers": [
+      "12 January 2024",
+      "19 January 2024"
+    ],
+    "answer_aliases": [
+      "January 12, 2024",
+      "12 Jan 2024",
+      "12.01.2024",
+      "January 19, 2024",
+      "19 Jan 2024",
+      "19.01.2024"
+    ],
+    "reason": "原 answer 的 D4:27 与原 evidence 的 D11:2 分别指向两次明确符合题面的事件；无法恢复唯一原意。项目修订接受任一日期，不要求联合列举两日期。",
+    "judge_rule": "Either supported date is acceptable; both dates are not required.",
+    "supporting_turn_ids": [
+      "D4:27",
+      "D11:2"
+    ]
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "version": "longmemeval-posthoc-question-guidance-20260922-v1.2",
+  "base_rubric": "longmemeval-official:90413115ed06dd07135f9d9ed53b14238776029eeb1a32a87ccbfbc0e2730482",
+  "questions": {
+    "8a137a7f": {
+      "question": "What type of bulb did I replace in my bedside lamp?",
+      "question_type": "single-session-user",
+      "original_reference": "Philips LED bulb",
+      "guidance": "The supported bedside-lamp identity is a Philips LED bulb; accept equivalent wording and omission/addition of an article. The user explicitly said 'the Philips LED bulb I have in my bedside lamp' and 'I have been using a Philips LED bulb in my bedside lamp'. Philips Hue / Philips Hue White occurs only in the assistant's recommendations for future kitchen lighting, not as the user's bedside bulb. Reject an answer that identifies the bedside bulb as Hue or Hue White, with or without 'a': belonging to the Philips LED product family does not establish that specific model. Also reject an unsupported definite smart/color-changing model claim. Do not require details of a replacement event; the source establishes the bedside bulb's identity but not a separate replacement event. Repeating the question's replacement wording alone is not an extra error.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "58ef2f1c": {
+      "question": "When did I volunteer at the local animal shelter's fundraising dinner?",
+      "question_type": "single-session-user",
+      "original_reference": "February 14th",
+      "guidance": "The requested event date is February 14 (Valentine's Day). The user explicitly recalled volunteering at the Love is in the Air fundraising dinner 'back on Valentine's Day'. Accept February 14, 14 February, or Valentine's Day without requiring a year. February alone, 'in February', and 'back in February' are all incomplete and must receive no, regardless of sentence length. Other specific days are incorrect. This question is single-session-user, not a duration-count question, so the temporal off-by-one rule does not relax its calendar date.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "6071bd76": {
+      "question": "For the coffee-to-water ratio in my French press, did I switch to more water per tablespoon of coffee, or less?",
+      "question_type": "knowledge-update",
+      "original_reference": "You switched to less water (5 ounces) per tablespoon of coffee.",
+      "guidance": "The evidence is chronological: on February 11 the user reported 1 tablespoon of coffee per 6 ounces of water; on June 30 the user reported 1 tablespoon per 5 ounces. The required answer is LESS water per tablespoon (a stronger coffee mixture). Accept 'less', 'decreased', or a clearly stated transition from 6 to 5 ounces. Reject 'more', 'unchanged', 'no change', 'maintained the same ratio', or 'neither more nor less', even when 5 ounces appears. A bare current ratio of 1:5 without expressing the change does not answer the direction question. A statement that the current ratio is 1:6, or a comparison with an imagined standard instead of the user's earlier ratio, cannot substitute for the actual 6-to-5 change. Correctly mentioning the earlier ratio alongside the later one is allowed. Merely saying \"not more water\" or \"not switched to more water; instead used 5 ounces\" does not establish a decrease: no increase is compatible with no change. Such wording must receive no unless it also explicitly states less/decreased or supplies the correct earlier-to-later transition. The same requirement applies to terse and verbose responses.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1.1"
+    },
+    "f685340e": {
+      "question": "How often do I play tennis with my friends at the local park previously? How often do I play now?",
+      "question_type": "knowledge-update",
+      "original_reference": "Previously, you play tennis with your friends at the local park every week (on Sunday). Currently, you play tennis every other week (on Sunday).",
+      "guidance": "This question explicitly asks for BOTH the previous and current tennis frequency. The user previously described weekly tennis sessions, then later said every other week. Require both: previously once a week / weekly, and now once every two weeks / every other week / fortnightly. Sunday is optional because the question asks frequency. The words 'every other week' alone, or a complete sentence supplying only that current frequency, are equally incomplete and must receive no. Saying both past and present were every other week is incorrect. A plan to play this Sunday does not establish the past weekly frequency. The knowledge-update permission to include old information does not waive either of the two requested facts.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "2698e78f_abs": {
+      "question": "How often do I see Dr. Johnson?",
+      "question_type": "knowledge-update",
+      "original_reference": "The information provided is not enough. You mentioned seeing Dr. Smith but not Dr. Johnson.",
+      "guidance": "The question is unanswerable: the history mentions Dr. Smith, not a known appointment frequency with Dr. Johnson. Accept an explicit statement that Dr. Johnson's frequency is unknown / not mentioned / cannot be determined. Mentioning Dr. Smith as an explanation is allowed. Do not transfer any weekly or fortnightly frequency from Smith to Johnson. Distinguish absence of evidence from evidence of absence: 'I/the user do(es) not see Dr. Johnson', 'never', or zero visits presented as a factual conclusion must receive no. This remains no if an earlier sentence says there is no mention and then concludes 'therefore the user does not see Dr. Johnson'; 'based on the information provided' alone does not make that factual conclusion an abstention. A statement limited to 'no visits to Dr. Johnson are mentioned/recorded' is an acceptable unknown-information answer. Grammatical variations such as 'mentioned' versus 'has mentioned' do not change the verdict.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "gpt4_4cd9eba1": {
+      "question": "How many weeks have I been accepted into the exchange program when I started attending the pre-departure orientation sessions?",
+      "question_type": "temporal-reasoning",
+      "original_reference": "one week",
+      "guidance": "For this question the requested interval is from acceptance into the exchange program (March 20) to the START of orientation (March 27): reference 1 week. Apply the official plus/minus ONE WEEK tolerance to the requested interval. Use these two steps in order:\n1. Identify what interval the response explicitly answers. A bare duration is an answer to the interval in the QUESTION. Do not infer another interval merely from its numeric value. Only if the response explicitly says how long the user has already BEEN ATTENDING orientation sessions does it answer a different interval; that is no.\n2. For an answer to the requested interval, 0, 1 or 2 weeks is YES by the official tolerance; 10 weeks is NO. Number words and equivalent duration units have the same verdict.\nExplicit minimal examples: '1 week' -> yes; '1' -> yes; '2 weeks' -> yes; 'two weeks' -> yes. In contrast, 'The user has been attending pre-departure orientation sessions for 2 weeks' -> no because it explicitly names a different interval. The bare answer '2 weeks' does NOT make that claim and MUST be accepted. Do not override the numeric tolerance by insisting on exactly 1 week.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1.2"
+    },
+    "b46e15ed": {
+      "question": "How many months have passed since I participated in two charity events in a row, on consecutive days?",
+      "question_type": "temporal-reasoning",
+      "original_reference": "2",
+      "guidance": "This question asks for a duration/count in months; its reference is 2 months. Apply the existing official off-by-one tolerance in the ASKED UNIT, not just to day counts. Thus a clear answer of 1, 2, 3 months is accepted (yes), including number words, an omitted unit when unambiguous from this question, or 'ago' when appropriate. An explicit estimate within [1, 3] months also satisfies that tolerance. This is a scoring tolerance, not a claim that these durations are factually identical. A quantity outside that interval, the wrong unit, an unrelated event, or no usable duration does not qualify. Vague 'a while back' or unspecified 'a few weeks/months' is not a determinate duration. Do not accept a broad range merely because it includes the reference; the asserted range must lie inside the tolerated interval. A correct-looking number in an irrelevant passage is insufficient.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "af082822": {
+      "question": "How many weeks ago did I attend the friends and family sale at Nordstrom?",
+      "question_type": "temporal-reasoning",
+      "original_reference": "2",
+      "guidance": "This question asks for a duration/count in weeks; its reference is 2 weeks. Apply the existing official off-by-one tolerance in the ASKED UNIT, not just to day counts. Thus a clear answer of 1, 2, 3 weeks is accepted (yes), including number words, an omitted unit when unambiguous from this question, or 'ago' when appropriate. An explicit estimate within [1, 3] weeks also satisfies that tolerance. This is a scoring tolerance, not a claim that these durations are factually identical. A quantity outside that interval, the wrong unit, an unrelated event, or no usable duration does not qualify. Vague 'a while back' or unspecified 'a few weeks/months' is not a determinate duration. Do not accept a broad range merely because it includes the reference; the asserted range must lie inside the tolerated interval. A correct-looking number in an irrelevant passage is insufficient.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "gpt4_85da3956": {
+      "question": "How many weeks ago did I attend the 'Summer Nights' festival at Universal Studios Hollywood?",
+      "question_type": "temporal-reasoning",
+      "original_reference": "3 weeks ago",
+      "guidance": "This question asks for a duration/count in weeks; its reference is 3 weeks. Apply the existing official off-by-one tolerance in the ASKED UNIT, not just to day counts. Thus a clear answer of 2, 3, 4 weeks is accepted (yes), including number words, an omitted unit when unambiguous from this question, or 'ago' when appropriate. An explicit estimate within [2, 4] weeks also satisfies that tolerance. This is a scoring tolerance, not a claim that these durations are factually identical. A quantity outside that interval, the wrong unit, an unrelated event, or no usable duration does not qualify. Vague 'a while back' or unspecified 'a few weeks/months' is not a determinate duration. Do not accept a broad range merely because it includes the reference; the asserted range must lie inside the tolerated interval. A correct-looking number in an irrelevant passage is insufficient.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "gpt4_e072b769": {
+      "question": "How many weeks ago did I start using the cashback app 'Ibotta'?",
+      "question_type": "temporal-reasoning",
+      "original_reference": "3 weeks ago",
+      "guidance": "This question asks for a duration/count in weeks; its reference is 3 weeks. Apply the existing official off-by-one tolerance in the ASKED UNIT, not just to day counts. Thus a clear answer of 2, 3, 4 weeks is accepted (yes), including number words, an omitted unit when unambiguous from this question, or 'ago' when appropriate. An explicit estimate within [2, 4] weeks also satisfies that tolerance. This is a scoring tolerance, not a claim that these durations are factually identical. A quantity outside that interval, the wrong unit, an unrelated event, or no usable duration does not qualify. Vague 'a while back' or unspecified 'a few weeks/months' is not a determinate duration. Do not accept a broad range merely because it includes the reference; the asserted range must lie inside the tolerated interval. A correct-looking number in an irrelevant passage is insufficient.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "gpt4_61e13b3c": {
+      "question": "How many weeks passed between the time I sold homemade baked goods at the Farmers' Market for the last time and the time I participated in the Spring Fling Market?",
+      "question_type": "temporal-reasoning",
+      "original_reference": "3 weeks",
+      "guidance": "This question asks for a duration/count in weeks; its reference is 3 weeks. Apply the existing official off-by-one tolerance in the ASKED UNIT, not just to day counts. Thus a clear answer of 2, 3, 4 weeks is accepted (yes), including number words, an omitted unit when unambiguous from this question, or 'ago' when appropriate. An explicit estimate within [2, 4] weeks also satisfies that tolerance. This is a scoring tolerance, not a claim that these durations are factually identical. A quantity outside that interval, the wrong unit, an unrelated event, or no usable duration does not qualify. Vague 'a while back' or unspecified 'a few weeks/months' is not a determinate duration. Do not accept a broad range merely because it includes the reference; the asserted range must lie inside the tolerated interval. A correct-looking number in an irrelevant passage is insufficient.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    },
+    "5e1b23de": {
+      "question": "How many months ago did I attend the photography workshop?",
+      "question_type": "temporal-reasoning",
+      "original_reference": "3",
+      "guidance": "This question asks for a duration/count in months; its reference is 3 months. Apply the existing official off-by-one tolerance in the ASKED UNIT, not just to day counts. Thus a clear answer of 2, 3, 4 months is accepted (yes), including number words, an omitted unit when unambiguous from this question, or 'ago' when appropriate. An explicit estimate within [2, 4] months also satisfies that tolerance. This is a scoring tolerance, not a claim that these durations are factually identical. A quantity outside that interval, the wrong unit, an unrelated event, or no usable duration does not qualify. Vague 'a while back' or unspecified 'a few weeks/months' is not a determinate duration. Do not accept a broad range merely because it includes the reference; the asserted range must lie inside the tolerated interval. A correct-looking number in an irrelevant passage is insufficient.",
+      "prompt_version": "longmemeval-posthoc-question-guidance-20260922-v1"
+    }
+  }
+}
