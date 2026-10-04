@@ -26,6 +26,7 @@ cd MCC-OPD
 Use Python 3.12 and a CUDA-enabled environment:
 
 ```bash
+python -m pip install --upgrade pip
 python -m pip install -r requirements-training.txt
 ```
 

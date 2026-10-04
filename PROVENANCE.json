@@ -100,7 +100,7 @@
       "The training configuration is transcribed from the completed paper run, not a proposed default.",
       "Legacy native_outcome_gamma and native_outcome_l_ref fields are not MCC loss hyperparameters.",
       "The executable preset is configs/mcc_opd.yaml in the separate MCC-OPD training package.",
-      "Evaluation settings record the paper protocol; the training package supplies test inputs without evaluation runners."
+      "Evaluation settings record the paper protocol; the code package includes four-benchmark scoring and Judge entrypoints, with prepared data distributed separately."
     ],
     "source_config_sha256": "4622292ed87bf1b50ad51157043b55900ecbf6b0d70ed4775a28ee9bda7c5f66"
   }
