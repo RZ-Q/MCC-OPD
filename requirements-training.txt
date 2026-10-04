@@ -1,5 +1,7 @@
 # 论文实际训练环境；Linux x86_64、Python 3.12、CUDA 12.9 wheels。
 torch @ https://download-r2.pytorch.org/whl/cu129/torch-2.11.0%2Bcu129-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=68b83cb7d7d43bc67c2833c8aebaea6a966f2017c3389885affa3361c258b7e3
+torchvision @ https://download-r2.pytorch.org/whl/cu129/torchvision-0.26.0%2Bcu129-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=086aa9ac91e56cf339ea6c646bc000b970e62159b609d84e0a2d3c9859fe5885
+torchaudio @ https://download-r2.pytorch.org/whl/cu129/torchaudio-2.11.0%2Bcu129-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=de4105653562f031edd6ddf7dd1485f07db6ac62cdc90d17364648cd3c89eb5a
 vllm @ https://github.com/vllm-project/vllm/releases/download/v0.20.0/vllm-0.20.0%2Bcu129-cp38-abi3-manylinux_2_31_x86_64.whl
 transformers==5.8.0
 ray[default]==2.56.0
